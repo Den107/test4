@@ -1,0 +1,356 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a {
+  color: inherit;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  object-fit: cover;
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.card {
+  max-width: 630px;
+  height: 423px;
+  padding: 27px 28px 21px 35px;
+}
+.card__header {
+  display: flex;
+  align-items: center;
+}
+.card__header-text {
+  margin-left: 12px;
+}
+.card__header-title a {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
+  color: #181c32;
+}
+.card__header-title a:hover {
+  color: #3445e5;
+}
+.card__header-subtitle {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #b5b5c3;
+}
+.card__status {
+  margin-top: 24px;
+  display: flex;
+}
+.card__status-st {
+  margin-right: 52px;
+}
+.card__status-label {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #3f4254;
+}
+.card__status-button {
+  position: relative;
+  width: 135px;
+  height: 36px;
+  background: #ffe2e5;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  color: #f64e60;
+  margin-top: 12px;
+}
+.card__status-button span {
+  padding-left: 14px;
+}
+.card__status-button::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  z-index: 10;
+  background-image: url("images/pause.svg");
+  left: 10px;
+  top: 6px;
+}
+.card__status-button.play {
+  background: #c9f7f5;
+  color: #1bc5bd;
+}
+.card__status-button.play::before {
+  background-image: url("images/play.svg");
+}
+.card__status-range {
+  position: relative;
+  width: 240px;
+  height: 6px;
+  background: #f4f7fa;
+  border-radius: 6px;
+  margin-top: 27px;
+}
+.card__status-range span {
+  position: absolute;
+  right: -38px;
+  top: -8px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #b5b5c3;
+}
+
+.card__status-range-active {
+  position: absolute;
+  display: none;
+  width: 122px;
+  height: 6px;
+  left: 0;
+  top: 0;
+  background: #3445e5;
+  border-radius: 6px;
+}
+.card__status-clock {
+  position: relative;
+  width: 76px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #7e8299;
+  margin-left: 66px;
+  margin-top: 32px;
+}
+.card__status-clock span {
+  position: absolute;
+  left: 30px;
+  top: 6px;
+}
+.card__status-clock::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("images/clock.svg");
+  left: 1px;
+  top: 3px;
+}
+.line {
+  width: 564px;
+  height: 1px;
+  margin: 0 auto;
+  border: 2px solid #f4f7fa;
+  margin-top: 30px;
+  margin-bottom: 26px;
+}
+.card__parameters {
+  display: flex;
+  align-items: center;
+}
+.card__parameters-block {
+  margin-left: 32px;
+}
+.card__parameters-block:first-child {
+  margin-left: 0;
+}
+.card__parameters-block-label {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #3f4254;
+}
+.card__parameters-block-value {
+  position: relative;
+  width: 120px;
+  height: 36px;
+  border: 1px solid #f3f6f9;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  color: #7e8299;
+}
+.card__parameters-block-value span {
+  position: absolute;
+  top: 8px;
+  left: 7px;
+}
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__footer-callet {
+  display: flex;
+}
+.card__footer-callet-value {
+  position: relative;
+  width: 133px;
+  height: 36px;
+  background: #f3f6f9;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  color: #7e8299;
+}
+.card__footer-callet-value::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  z-index: 10;
+  background-image: url("images/Wallet.svg");
+  left: 12px;
+  top: 7px;
+}
+.card__footer-callet-value span {
+  position: absolute;
+  left: 48px;
+  top: 9px;
+}
+.card__footer-callet-plus {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: #f1f3ff;
+  border-radius: 6px;
+  margin-left: 12px;
+}
+.card__footer-callet-plus::before {
+  position: absolute;
+  content: "";
+  background: #3445e5;
+  width: 16px;
+  height: 2px;
+  transform: translateX(-50%);
+}
+.card__footer-callet-plus::after {
+  position: absolute;
+  content: "";
+  background: #3445e5;
+  opacity: 0.3;
+  width: 2px;
+  height: 16px;
+  transform: translate(-50%, -44%);
+}
+.card__footer-callet-plus:hover {
+  background: #3445e5;
+}
+.card__footer-callet-plus:hover::before {
+  background: #ffffff;
+}
+.card__footer-callet-plus:hover::after {
+  background: #ffffff;
+}
+.card__footer-details {
+  position: relative;
+  width: 114px;
+  height: 36px;
+  background: #f1f3ff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #3445e5;
+}
+.card__footer-details span {
+  position: absolute;
+  left: 43px;
+  top: 8px;
+}
+.card__footer-details::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("images/equalizer.svg");
+  left: 11px;
+  top: 6px;
+}
+.card__footer-details:hover {
+  background: #3445e5;
+  color: #fff;
+}
+.card__footer-details:hover::before {
+  background-image: url("images/Equalizerhov.svg");
+}
