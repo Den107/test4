@@ -51,22 +51,30 @@ promise.then(res => console.log(res))
   .catch(error => console.error(error));
 
 //4 Validate
-const input = document.querySelector('input');
-function validateInput(selector, maxNumber = 1000) {
+
+function isValid(value, maxNumber = 1000) {
   const regExp = /^\d{1,}\.\d{2}$/;
   let validMaxNumber = (maxNumber - 0.01).toFixed(2);
 
-  selector.addEventListener('change', () => {
-    if (+(selector.value) >= maxNumber) {
-      selector.value = validMaxNumber;
-    } else if (regExp.test(selector.value)) {
-      selector.style.background = 'green';
-    } else if (!selector.value) {
-      selector.style.background = '';
-    } else {
-      selector.style.background = 'red';
-    }
-  });
+  value = +value;
+  if (value >= maxNumber) {
+    value = validMaxNumber;
+    console.log(`${value} Is Valid`);
+    return true;
+  } else if (regExp.test(value)) {
+    console.log(`${value} Is Valid`);
+    return true;
+  } else if (/\w/g.test(value)) {
+    value = '';
+    console.log(`${value} Is Invalid`);
+    return false;
+  } else {
+    console.log(`${value} Is Invalid`);
+    return false;
+  }
 }
 
-validateInput(input, 1000);
+isValid('adc', 1000);
+
+const inp = document.querySelector('input');
+inp.addEventListener('change', () => isValid(inp.value, 1000));

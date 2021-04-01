@@ -85,14 +85,23 @@ h6 {
 }
 
 .container {
-  max-width: 650px;
+  max-width: 1343px;
   margin: 0 auto;
-  padding: 0 10px;
+  /* padding: 0 10px; */
+}
+.wrapper {
+  min-width: 1343px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e4e6ef;
+  justify-content: center;
 }
 .card {
   max-width: 630px;
   height: 423px;
   padding: 27px 28px 21px 35px;
+  background-color: #fff;
+  margin: 12px;
 }
 .card__header {
   display: flex;
@@ -188,6 +197,9 @@ h6 {
   top: 0;
   background: #3445e5;
   border-radius: 6px;
+}
+.card__status-range-active.active {
+  display: block;
 }
 .card__status-clock {
   position: relative;
